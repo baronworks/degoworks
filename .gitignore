@@ -7,3 +7,4 @@
 
 #for eclipse
 *.project
+/bin
