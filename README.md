@@ -2,13 +2,10 @@
 DegoWorks Software Overview
 ===========================
 
-Is a java project built to allow for communication with Lego's dacta 70909 serial port controllers 
-as well as lejos enabled mindstorms robotics.
+Is a java project built to allow for communication with multiple Lego's dacta 70909 serial port controllers 
+and future integration with mindstorms NXT robotics.
 
 - 8 dacta controllers can be ran simultaneously (gui only limitation)
-- lego USB tower and remote integration WILL NOT work on Windows x64 systems
-	- (not under active development)
-	- possible Serial Tower integration http://www.rjmcnamara.com/lego-minstorms/lego-mindstorms-ris-windows7/
 - XML configuration to map functionality to Controllers and Mindstorms
 - Individual Programs can be programmed by extending the com.degoworks.DegoManager.ProgramImpl class
 	which then allows for the degoworks software to use reflection for mapping
