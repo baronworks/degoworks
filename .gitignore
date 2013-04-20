@@ -1,0 +1,9 @@
+*.class
+
+# for jedit
+*~
+# for degoworks
+*.log
+
+#for eclipse
+*.project

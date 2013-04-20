@@ -1,0 +1,15 @@
+<!ELEMENT application ( serial_port_ignore | project )* >
+<!ATTLIST application
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+default_project CDATA #REQUIRED
+>
+
+<!ELEMENT serial_port_ignore ( #PCDATA )>
+
+<!ELEMENT project ( #PCDATA )>
+<!ATTLIST project
+src CDATA #REQUIRED
+title CDATA #REQUIRED
+run_on_load CDATA #REQUIRED
+>

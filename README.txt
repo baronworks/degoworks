@@ -1,6 +1,3 @@
-degoworks
-=========
-
 DegoWorks Software Overview
 ---------------------------
 Is a java project built to allow for communication with Lego's dacta 70909 serial port controllers 
@@ -36,26 +33,21 @@ Platforms
  - In theory should be able to get it to work on any platform
  - originally built with java 1.5 on windows XP
  - most of it working with java 1.7 on Windows 7 x 64
- - windows 32 bit versions will not be able to close and reload projects or 
- 	allow for disconnecting and connection to ports once running
- - for windows 7 x 64 developed using the RXTXcomm-clc.jar from create-lab-commons
- 	which is the only one that I have found that allows for reloading projects and connections
+ - windows 32 bit versions should be able to use the lego USB tower and remote
+  	- no 64 bit drivers for the usb tower  
+  	- http://www.sevenforums.com/drivers/3445-lego-usb-tower.html
+		use serial port tower with usb-serial adaptar 
 
 RXTX - Java library for serial and parallel communication
 ---------------------------------------------------------
 RXTX is an open source library that is used to communicate with the DACTA 70909
 serial controller
 
-they have their own drivers and jar file and point to other builds that may be better
-suited for other environments like windows x64
+they have their own drivers and jar file
 
 http://rxtx.qbang.org/wiki/index.php/Main_Page
 http://rxtx.qbang.org/wiki/index.php/Installation_for_Windows
-64 bit versions for different platforms I use
-http://code.google.com/p/create-lab-commons/source/browse/trunk/java/lib/rxtx/
-the their RXTXcomm.jar is in the repo as RXTXcomm-clc.jar 
-
-
+64 bit versions for different platforms- http://www.cloudhopper.com/opensource/rxtx/
 
 Identify your Java Development Kit's folder. For version 1.6.0, this usually is
 
@@ -65,7 +57,7 @@ Identify your Java Development Kit's folder. For version 1.6.0, this usually is
     
 Java look and feel
 ------------------
- - java look and feel graphics are in jlfgr-1_0.jar
+ - java look and feel graphics are in jlfgr-1_0.jar and tango-icon-theme-0.8.0.jar
  	
 
 TODO
@@ -89,5 +81,6 @@ Other Notes
  needs to be manually shut down.
  
  Eclipse is the preferred IDE simply because of its lejos NXT integration. 
+
 
 

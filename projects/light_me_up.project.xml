@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "DegoProject.dtd">
+<project class="programs.LightMeUp" id="lights">
+    <description>Simple program to activate different lighting routines on 2 controllers.</description>
+	<program id="LightMeUp" name="Light Me Up" class="programs.LightMeUp">Program Description here</program>
+	<program id="Train" name="Keep em Rolling" class="programs.Train">Program Description here</program>
+    <globals>
+        <!-- variables represented in a HashMap -->
+        <variable id="flash1" type="boolean">on or off</variable>
+        <variable id="flash1_count" type="int">count</variable>
+        <variable display="true" id="toggleMe" type="boolean">on or off</variable>
+        <variable id="anything" type="double">calcuation</variable>
+        <variable display="We are the global" id="big brother" type="global">global_1</variable>
+    </globals>
+	<!-- <remote>
+		<button id="0" name="message1" onPress="LightMeUp.turnAllLightsOn" pressed="" onRelease="LightMeUp.turnAllLightsOff"/>
+		<button id="1" name="message2" onPress="LightMeUp.turnAllLightsOff" pressed="" onRelease=""/>
+		<button id="2" name="message3" onPress="LightMeUp.reverseLights" pressed="" onRelease="LightMeUp.reverseLights"/>
+		<button id="3" name="aUp" onPress="LightMeUp.reverseLights" pressed="" onRelease="LightMeUp.reverseLights"/>
+		<button id="4" name="bUp" onPress="" pressed="" onRelease=""/>
+		<button id="5" name="cUp" onPress="" pressed="" onRelease=""/>
+		<button id="6" name="aDown" onPress="" pressed="" onRelease=""/>
+		<button id="7" name="bDown" onPress="" pressed="" onRelease=""/>
+		<button id="8" name="cDown" onPress="" pressed="" onRelease=""/>
+		<button id="9" name="program1" onPress="Train.turnTrainOn" pressed="" onRelease="Train.turnTrainOff"/>
+		<button id="10" name="program2" onPress="" pressed="" onRelease=""/>
+		<button id="11" name="program3" onPress="" pressed="" onRelease=""/>
+		<button id="12" name="program4" onPress="" pressed="" onRelease=""/>
+		<button id="13" name="program5" onPress="" pressed="" onRelease=""/>
+		<button id="14" name="stop" onPress="" pressed="" onRelease=""/>
+		<button id="15" name="sound"  onPress="LightMeUp.flashAll" pressed="" onRelease=""/>
+	</remote>-->
+    <!-- id for controllers, sensors and outputs is the element of the array which start at 0 -->
+    <controller default_port="COM5" id="0" name="GUI 1">
+        <!-- see josx.platform.rcx.SensorConstants for sensor types -->
+        <sensor id="0" type="SENSOR_TYPE_TOUCH" mode="SENSOR_MODE_RAW" tooltip="">
+		<description/>
+		<event type="TOUCH_ON_PRESS_EVENT">
+			<action method="LightMeUp.turnAllLightsOn">All On</action>
+		</event>
+		<event type="TOUCH_ON_RELEASE_EVENT">
+			<action method="LightMeUp.turnAllLightsOff">All Off</action>
+		</event>
+        </sensor>
+        <sensor id="1" type="SENSOR_TYPE_TOUCH"  mode="SENSOR_MODE_RAW" tooltip="Toggle Me">
+		<description/>
+		<event type="TOUCH_ON_PRESS_EVENT">
+			<action method="LightMeUp.reverseLights">Reverse Lights</action>
+		</event>
+		<event type="TOUCH_ON_RELEASE_EVENT">
+			<action method="LightMeUp.reverseLights">Reverse Lights</action>
+		</event>
+        </sensor>
+	<sensor id="2" type="SENSOR_TYPE_TOUCH" mode="SENSOR_MODE_RAW" tooltip="Toggle Me">
+		<description/>
+		<event type="TOUCH_ON_PRESS_EVENT">
+			<action method="LightMeUp.flashAll">Flash All</action>
+		</event>
+		<event type="TOUCH_ON_RELEASE_EVENT">
+			<action method="LightMeUp.turnAllLightsOff">Lights Off</action>
+		</event>
+	</sensor>
+        <sensor id="3" type="SENSOR_TYPE_TEMP"  mode="SENSOR_MODE_DEGC" tooltip="">Temp</sensor>        
+        <!-- bottom row of sensors powered ids 4-7 -->
+        <sensor id="4" type="SENSOR_TYPE_ROT"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="5" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="6" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="7" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <!-- see dacta.DACTAOutput.java for output types-->
+        <output id="0" type="TYPE_LIGHT_TOP_SINGLE"  tooltip="Light me up">Single Top Light</output>
+        <output id="1" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="2" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="3" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="4" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="5" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="6" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="7" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+    </controller>
+    <controller default_port="COM3" id="1" name="GUI 2">
+        <!-- see josx.platform.rcx.SensorConstants for sensor types -->
+        <sensor id="0" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="1" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="2" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="3" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <!-- bottom row of sensors powered ids 4-7 -->
+        <sensor id="4" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="5" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="6" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <sensor id="7" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW" tooltip="">Raw</sensor>
+        <!-- see dacta.DACTAOutput.java for output types-->
+        <output id="0" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="1" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="2" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="3" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="4" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="5" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="6" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+        <output id="7" type="TYPE_LIGHT_TOP_SINGLE" tooltip="">Single Top Light</output>
+    </controller>
+    
+</project>

@@ -1,0 +1,28 @@
+<application name="D'egoWORKS" id="degoworks" reload_deloy="5000">
+	<serial_port ignore="true">COM1</serial_port>
+	<serial_port ignore="true">COM2</serial_port>
+	<projects>
+		<project src="projects/light_me_up.project.xml" libs="" run_on_load="true" title="Light Controls">Controll All Lights</project>
+		<project src="projects/test_controller.project.xml" libs="" run_on_load="true" title="">Controll All Lights</project>
+	</projects>
+</application>
+
+<!--
+
+NOTES 
+ projects.xml
+ degoworks.properties AS defined by application id
+ projects/light_me_up.xml
+ projects/test_controller.xml
+ 
+ load all in directory by *.xml pattern
+ 
+ 
+
+build properties file that can remember settings
+
+	load_last_project=true
+
+some methods in dactaControllergui should be moved to the project manager	
+
+-->

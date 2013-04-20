@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application SYSTEM "application.dtd">
+<application id="degoworks" name="D'egoWORKS" default_project="projects/test_controller.project.xml">
+	<serial_port_ignore>COM1</serial_port_ignore>
+	<serial_port_ignore>COM2</serial_port_ignore>
+	<project src="projects/light_me_up.project.xml" run_on_load="true" title="Light Me Up">Controll All Lights</project>
+	<project src="projects/test_controller.project.xml" run_on_load="false" title="Test">Test Controller</project>
+</application>

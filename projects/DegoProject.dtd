@@ -1,0 +1,72 @@
+
+<!ELEMENT project  ( description | program | remote | globals | controller )*>
+<!ATTLIST project
+class CDATA #REQUIRED
+id CDATA #REQUIRED
+>
+
+<!ELEMENT description  ( #PCDATA )>
+
+<!ELEMENT program ( #PCDATA )>
+<!ATTLIST program
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+class CDATA #REQUIRED
+>
+
+<!ELEMENT remote (button*)>
+
+<!ELEMENT button EMPTY>
+<!ATTLIST button
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+onPress CDATA #REQUIRED
+pressed CDATA #REQUIRED
+onRelease CDATA #REQUIRED
+>
+
+<!ELEMENT globals  ( variable )*>
+
+<!ELEMENT variable  ( #PCDATA )>
+<!ATTLIST variable
+id CDATA #REQUIRED
+type CDATA #REQUIRED
+display CDATA #IMPLIED
+>
+
+<!ELEMENT controller  ( sensor | output )*>
+<!ATTLIST controller
+default_port CDATA #REQUIRED
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+>
+
+<!ELEMENT sensor  ( #PCDATA | description | event )*>
+<!ATTLIST sensor
+id CDATA #REQUIRED
+type CDATA #REQUIRED
+mode CDATA #REQUIRED
+tooltip CDATA #IMPLIED
+>
+
+<!ELEMENT caption  ( #PCDATA )>
+
+<!ELEMENT event  ( action )*>
+<!ATTLIST event
+type CDATA #REQUIRED
+>
+
+<!ELEMENT action  ( #PCDATA )>
+<!ATTLIST action
+method CDATA #IMPLIED
+value CDATA #IMPLIED
+variable CDATA #IMPLIED
+>
+
+<!ELEMENT output  ( #PCDATA )* >
+<!ATTLIST output
+id CDATA #REQUIRED
+type CDATA #REQUIRED
+disabled CDATA #IMPLIED
+tooltip CDATA #IMPLIED
+>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "DegoProject.dtd">
+<project class="com.degoworks.projects.ProgramImpl" id="test_controller">
+    <description>Simple program to test a controller</description>
+    <!-- id for controllers, sensors and outputs is the element of the array which start at 0 -->
+    <controller default_port="COM5" id="0" name="GUI 2">
+        <!-- see josx.platform.rcx.SensorConstants for sensor types -->
+        <sensor id="0" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="1" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="2" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="3" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <!-- bottom row of sensors powered ids 4-7 -->
+        <sensor id="4" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="5" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="6" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <sensor id="7" type="SENSOR_TYPE_RAW"  mode="SENSOR_MODE_RAW">Raw</sensor>
+        <!-- see dacta.DACTAOutput.java for output types-->
+        <output id="0" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="1" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="2" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="3" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="4" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="5" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="6" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+        <output id="7" type="TYPE_LIGHT_TOP_SINGLE">Single Top Light</output>
+    </controller>
+</project>
+
