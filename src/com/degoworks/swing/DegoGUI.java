@@ -82,7 +82,8 @@ public class DegoGUI extends JFrame implements InternalFrameListener, ActionList
 		desktop = new JDesktopPane(); //a specialized layered pane
 		//Make dragging a little faster but perhaps uglier.
 		desktop.setDragMode(JDesktopPane.OUTLINE_DRAG_MODE);		
-		loadProject();
+		//loadProject();
+		projectLoadDialog();
 		startEventsViewer();
 	}
 	
