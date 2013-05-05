@@ -15,7 +15,7 @@ import dacta.DACTA70909Controller;
 
 
 
-public interface Program extends Runnable{
+public interface Program extends Runnable{	
 	
 	/* create and start the Program thread */
 	public void init();
@@ -70,5 +70,7 @@ public interface Program extends Runnable{
 	public void invokeMethod(String methodName);
 	
 	public void setDACTA70909Controllers(DACTA70909Controller[] dcControllers);
+	
+	public void callProgramListeners(String programId, int programEvent);
 	
 }
