@@ -19,10 +19,12 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.InvocationTargetException;
 
+import com.degoworks.interfaces.EventConstants;
+
 import dacta.DACTA70909Controller;
 
 
-public class ProgramImpl implements Program {
+public class ProgramImpl implements Program, EventConstants {
 	
 	private String id;
 	private String name;
@@ -243,6 +245,12 @@ public class ProgramImpl implements Program {
 	
 	public void setDACTA70909Controllers(DACTA70909Controller[] dcControllers){
 		this.dcControllers = dcControllers;
+	}
+
+	@Override
+	public void callProgramListeners(String programId, int programEvent) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
