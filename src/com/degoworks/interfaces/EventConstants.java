@@ -29,6 +29,13 @@ public interface EventConstants {
 	public static final String s_SENSOR_EVENT = "Sensor";
 	public static final String s_OUTPUT_EVENT = "Output";
 	
+	public static final int PROGRAM_LOAD_EVENT = 0;
+	public static final int PROGRAM_LOADED_EVENT = 1;
+	public static final int PROGRAM_CLOSING_EVENT = 2;
+	public static final int PROGRAM_CLOSED_EVENT = 3;
+	public static final int PROGRAM_RUNNING_EVENT = 4;
+	public static final int PROGRAM_PAUSED_EVENT = 5;
+	
 	public static final int PROJECT_LOAD_EVENT = 0;
 	public static final int PROJECT_LOADED_EVENT = 1;
 	public static final int PROJECT_CLOSING_EVENT = 2;
